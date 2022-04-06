@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <EditText
+        android:id="@+id/tvBaseAmount"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:ems="8"
+        android:hint="Bill amount"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/rvRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/tvService"
+        app:layout_constraintTop_toBottomOf="@+id/tvService">
+
+        <RadioButton
+            android:id="@+id/tvAmazing"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:text="Amazing(20%)"
+            android:textSize="10sp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <RadioButton
+            android:id="@+id/tvGood"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:text="Good(18%)"
+            android:textSize="10sp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <RadioButton
+            android:id="@+id/tvOkay"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:text="Okay(15%)"
+            android:textSize="10sp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </RadioGroup>
+
+    <Switch
+        android:id="@+id/tvSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Round up tip?                                                                                                             "
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textSize="9sp"
+        app:layout_constraintStart_toStartOf="@+id/rvRadioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/rvRadioGroup"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/tvButton"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        app:layout_constraintStart_toStartOf="@+id/tvSwitch"
+        app:layout_constraintTop_toBottomOf="@+id/tvSwitch" />
+
+    <TextView
+        android:id="@+id/tvService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How was the service?"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/tvBaseAmount"
+        app:layout_constraintTop_toBottomOf="@+id/tvBaseAmount" />
+
+
+    <TextView
+        android:id="@+id/tvTipAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvButton"
+        app:layout_constraintTop_toBottomOf="@+id/tvButton"
+        tools:text="Tip Amount $27.00" />
+    <TextView
+        android:id="@+id/tvFooter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="Made with ❤️ by Asiman"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
